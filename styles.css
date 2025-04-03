@@ -1,0 +1,295 @@
+/* === Base Styles === */
+@import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Amarante', cursive;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+/* === Header === */
+header {
+  padding: 20px;
+  background-color: white;
+}
+
+h1 {
+  font-size: 78px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  font-size: 40px;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #a52a2a;
+}
+
+/* === Hero Section === */
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero img {
+  width: 80%;
+  max-height: 900px;
+  object-fit: cover;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.book-btn {
+  padding: 15px 30px;
+  font-size: 20px;
+  border: none;
+  background-color: #a52a2a;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.book-btn.clicked {
+  background-color: #8b1a1a;
+}
+
+.book-btn:hover {
+  background-color: #8b1a1a;
+}
+
+/* === Menu Section === */
+.menu {
+  width: 1190px;
+  margin: 50px auto;
+}
+
+.menu h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(4, 268px);
+  gap: 60px;
+  justify-content: center;
+}
+
+.menu-item {
+  width: 268px;
+  height: 410px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 10px;
+}
+
+.menu-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.menu-item h3 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+/* === Reservation Modal === */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: white;
+  padding: 35px;
+  border-radius: 10px;
+  width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0px 0px 10px rgba(138,138,62,0.4);
+}
+
+.close-btn {
+  margin-top: 15px;
+  background-color: #a52a2a;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.close-btn:hover {
+  background-color: #8b1a1a;
+}
+
+/* === Reservation Form === */
+.reservation-form h2 {
+  text-align: center;
+  color: #333;
+}
+
+.reservation-form label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+  color: #333;
+  text-align: left;
+}
+
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.reservation-form textarea {
+  resize: none;
+  height: 60px;
+}
+
+.reservation-form input[type="checkbox"] {
+  width: auto;
+  margin-right: 5px;
+}
+
+.reservation-form button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.reservation-form button[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* === Footer === */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 50px 0;
+  width: 100%;
+  height: 458px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.footer-column {
+  width: 30%;
+}
+
+.footer-column h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #a52a2a;
+  padding-bottom: 5px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #a52a2a;
+}
+
+.map-link {
+  display: block;
+  margin: 10px 0;
+  color: #a52a2a;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.map-link:hover {
+  text-decoration: underline;
+}
+
+.footer-column form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column input,
+.footer-column textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer-column button {
+  padding: 12px;
+  background-color: #a52a2a;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footer-column button:hover {
+  background-color: #8b1a1a;
+}
